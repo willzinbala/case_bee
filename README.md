@@ -99,5 +99,3 @@ A integração foi realizada de forma eficiente, evitando chamadas linha a linha
 
 Além disso, foi necessário ajustar a direção da taxa de câmbio (invertendo os valores retornados pela API), garantindo a correta conversão para a moeda desejada. O resultado final inclui um novo campo com o valor convertido (`amount_brl`), pronto para agregações e análises.
 
-Essa abordagem demonstra o uso de fontes externas para enriquecimento de dados, mantendo escalabilidade, rastreabilidade e consistência no pipeline.
-
