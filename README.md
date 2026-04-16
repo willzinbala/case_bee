@@ -306,4 +306,4 @@ O enriquecimento com API externa adiciona valor analítico, mostrando a importâ
 
 ## 👨‍💻 Autor
 
-Desenvolvido por *Willian José Nogueira* como desafio técnico de Engenharia de Dados com foco em boas práticas em Python, Spark, APIs públicas e Relatórios para tomada de decisão.
+Desenvolvido por *Willian José Nogueira* como desafio técnico de Engenharia de Dados com foco em boas práticas em Python, Spark, Modelagem de Dados,APIs públicas e Relatórios para tomada de decisão.
