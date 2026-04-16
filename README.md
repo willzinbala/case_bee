@@ -87,14 +87,17 @@ Exemplos:
 
 * `ref_orders_customers` → visão analítica de pedidos + clientes
 * `ref_events_customers` → visão analítica de eventos + clientes
+* `ref_orders_brl` → visão unificada de faturamento em BRL
 
----
+### 🌐 Uso de API Externa
 
-### 💡 Considerações
+Para enriquecer os dados e aumentar seu valor analítico, foi integrada uma API pública de câmbio, permitindo a conversão de valores monetários para uma moeda padrão (BRL).
 
-Essa abordagem separa claramente:
+A API foi utilizada para obter taxas de conversão atualizadas entre diferentes moedas, possibilitando a padronização dos valores presentes na base de pedidos. Esse enriquecimento viabiliza análises financeiras consistentes, independentemente da moeda original de cada transação.
 
-* **Modelagem de domínio** → foco em integridade e relacionamento
-* **Modelagem analítica** → foco em performance e usabilidade
+A integração foi realizada de forma eficiente, evitando chamadas linha a linha. As taxas foram coletadas em lote, transformadas em uma tabela de apoio (lookup) e posteriormente integradas aos dados via join distribuído no Spark.
 
-Permitindo evolução do pipeline, reuso de dados e maior clareza para consumo por ferramentas analíticas.
+Além disso, foi necessário ajustar a direção da taxa de câmbio (invertendo os valores retornados pela API), garantindo a correta conversão para a moeda desejada. O resultado final inclui um novo campo com o valor convertido (`amount_brl`), pronto para agregações e análises.
+
+Essa abordagem demonstra o uso de fontes externas para enriquecimento de dados, mantendo escalabilidade, rastreabilidade e consistência no pipeline.
+
