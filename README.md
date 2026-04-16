@@ -24,7 +24,7 @@ O foco principal foi garantir qualidade, rastreabilidade e capacidade analítica
 
 ---
 
-## 🏗️ Solução Encontrada
+### 🏗️ Solução Encontrada
 
 A solução foi construída utilizando o conceito de **arquitetura em camadas**, estruturada da seguinte forma:
 
@@ -170,13 +170,70 @@ Ao final, os dados tratados e enriquecidos estarão disponíveis nas camadas **t
 
 ## 🚀 Futuras Melhorias
 
-* Implementação de **data quality checks automatizados**
-* Tratamento de **dados em tempo real (streaming)**
-* Uso de **taxas de câmbio históricas** baseadas na data do pedido
-* Criação de **camada semântica (data mart)**
-* Integração com ferramentas de orquestração (ex: Airflow)
-* Criação de dashboards (Power BI / Streamlit)
-* Implementação de testes e validações automatizadas
+Para evolução do projeto em um cenário mais próximo de produção, algumas melhorias podem ser implementadas:
+
+* **Data Quality e Observabilidade**
+
+  * Implementação de validações automatizadas (ex: regras de consistência, integridade e completude)
+  * Monitoramento de métricas como volume, nulls, duplicidade e distribuição de dados
+  * Alertas para falhas ou degradação da qualidade
+
+* **Processamento em Tempo Real**
+
+  * Evolução do pipeline batch para streaming com Spark Structured Streaming
+  * Ingestão contínua de eventos em tempo real
+  * Atualizações incrementais nas camadas trusted e refined
+
+* **Câmbio com Base Histórica**
+
+  * Integração com APIs que fornecem taxa de câmbio por data
+  * Conversão de valores baseada no `order_date`, garantindo maior precisão financeira
+  * Armazenamento de histórico de taxas para reprocessamento
+
+* **Camada Semântica (Data Mart)**
+
+  * Modelagem em formato dimensional (Star Schema)
+  * Criação de tabelas fato e dimensão (ex: fact_orders, dim_customers)
+  * Definição de métricas de negócio padronizadas
+
+* **Orquestração de Pipeline**
+
+  * Uso de ferramentas como Apache Airflow para agendamento e controle de dependências
+  * Execução automatizada e monitorada dos pipelines
+  * Reprocessamento controlado em caso de falhas
+
+* **Versionamento e Estrutura de Projeto**
+
+  * Organização do projeto em um repositório estruturado (ex: separação por camadas e módulos)
+  * Versionamento de código e pipelines
+  * Uso de boas práticas de engenharia de software
+
+* **Testes e Validações**
+
+  * Implementação de testes unitários para transformações
+  * Testes de integração entre camadas
+  * Validação de contratos de dados (data contracts)
+
+* **Performance e Escalabilidade**
+
+  * Particionamento eficiente dos dados (ex: por data ou país)
+  * Otimização de joins e uso de broadcast quando aplicável
+  * Ajustes de configuração do Spark para grandes volumes
+
+* **Consumo e Visualização**
+
+  * Integração com ferramentas de BI (Power BI, Tableau)
+  * Criação de dashboards interativos
+  * Exposição de dados via APIs ou camada de serviço
+
+* **Governança de Dados**
+
+  * Controle de acesso e segurança
+  * Catalogação de dados (ex: Data Catalog)
+  * Documentação técnica e funcional das tabelas
+
+Essas melhorias transformariam o projeto em uma solução mais robusta, escalável e aderente a ambientes reais de engenharia de dados.
+
 
 ---
 
