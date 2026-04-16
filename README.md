@@ -239,13 +239,66 @@ Essas melhorias transformariam o projeto em uma solução mais robusta, escaláv
 
 ## 📈 Considerações e Conclusões
 
-O projeto demonstra na prática a construção de um pipeline de dados completo, desde a ingestão até a disponibilização para análise.
+O projeto demonstra, de forma prática, a construção de um pipeline de dados completo, cobrindo desde a ingestão de múltiplas fontes até a disponibilização de dados prontos para consumo analítico.
 
-A utilização de arquitetura em camadas permite:
+A adoção de uma arquitetura em camadas (Raw, Trusted e Refined) proporcionou:
 
-* Separação clara de responsabilidades
-* Maior controle sobre qualidade dos dados
-* Facilidade de manutenção e evolução
+* Separação clara de responsabilidades ao longo do pipeline
+* Maior controle sobre qualidade, consistência e rastreabilidade dos dados
+* Facilidade de manutenção, reprocessamento e evolução da solução
+
+Além disso, o enriquecimento com API externa de câmbio permitiu padronizar valores financeiros em uma única moeda, viabilizando análises mais precisas e comparáveis entre diferentes contextos.
+
+---
+
+### 🔍 Insights Possíveis a partir das Bases
+
+A estrutura construída permite extrair diversos insights relevantes, como:
+
+* **Receita total e receita líquida**, considerando pedidos concluídos e possíveis reembolsos
+* **Ticket médio por cliente**, auxiliando na identificação de perfis de maior valor
+* **Distribuição de pedidos por status**, permitindo análise operacional (pendências, cancelamentos)
+* **Engajamento de usuários**, através da análise de eventos (ex: volume de logins)
+* **Correlação entre comportamento e receita**, conectando eventos com conversões em pedidos
+* **Segmentação geográfica**, com base no país dos clientes
+
+---
+
+### 🎯 Possíveis Tomadas de Decisão
+
+Com base nesses dados, é possível suportar decisões estratégicas como:
+
+* **Otimização de funil de conversão**
+
+  * Identificar usuários que interagem (eventos) mas não compram
+  * Criar estratégias para aumentar conversão
+
+* **Gestão de receita**
+
+  * Monitorar impacto de cancelamentos e reembolsos
+  * Avaliar performance financeira por região ou segmento
+
+* **Segmentação de clientes**
+
+  * Identificar clientes de alto valor (high-value customers)
+  * Direcionar campanhas de retenção e fidelização
+
+* **Melhoria de produto**
+
+  * Analisar comportamento de navegação e uso (events)
+  * Identificar pontos de atrito na jornada do usuário
+
+---
+
+### 🧠 Valor da Solução
+
+A combinação de modelagem estruturada, tratamento de dados e enriquecimento externo demonstra uma abordagem alinhada com cenários reais de engenharia de dados, onde:
+
+* Dados brutos são transformados em ativos confiáveis
+* Diferentes fontes são integradas para gerar contexto
+* A base final suporta análises estratégicas e tomada de decisão
+
+O projeto evidencia não apenas a implementação técnica, mas também a capacidade de conectar dados a problemas de negócio, entregando uma solução com valor analítico concreto.
 
 O enriquecimento com API externa adiciona valor analítico, mostrando a importância de integrar dados internos com fontes externas para geração de insights mais completos.
 
