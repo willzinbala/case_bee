@@ -1,4 +1,4 @@
-# 📊 Case Beecrowd
+# 📊 Case Beecrowd e Eneva
 
 ## 📌 Escopo Geral
 
