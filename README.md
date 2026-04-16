@@ -24,12 +24,11 @@ O foco principal foi garantir qualidade, rastreabilidade e capacidade analítica
 
 ---
 
-### 🏗️ Solução Encontrada
+## 🏗️ Solução Encontrada
 
 A solução foi construída utilizando o conceito de **arquitetura em camadas**, estruturada da seguinte forma:
 
-
-## 🧩 Modelagem de Dados e Arquitetura em Camadas
+### 🧩 Modelagem de Dados e Arquitetura em Camadas
 
 A modelagem de dados foi estruturada considerando dois pilares complementares: o **modelo conceitual do domínio (ER)** e a **arquitetura em camadas (Raw, Trusted e Refined)**.
 
@@ -180,6 +179,47 @@ Ao final, os dados tratados e enriquecidos estarão disponíveis nas camadas **t
 
 ---
 
+### 🤖 Uso de IA
+
+Ferramentas de IA (ChatGPT) foram utilizadas como apoio ao desenvolvimento da solução, auxiliando na tomada de decisões técnicas, aceleração do desenvolvimento e melhoria da qualidade do código e da documentação.
+
+#### 🔹 Aplicações no projeto
+
+A IA foi utilizada para:
+
+* Apoiar o desenho da arquitetura do pipeline de dados (camadas raw, trusted e refined)
+* Sugerir estratégias de tratamento de qualidade de dados (valores nulos, duplicidades, inconsistências)
+* Auxiliar na implementação de transformações em **PySpark** (casts, joins, tratamento de datas, otimizações)
+* Apoiar na construção de **joins entre DataFrames** de forma eficiente e estruturada
+* Sugerir boas práticas para integração com APIs externas
+* Melhorar e estruturar o **README.md**, incluindo organização, clareza e padronização da documentação
+* Refinar explicações técnicas e organização do projeto
+
+---
+
+#### 🔹 Exemplos de prompts utilizados
+
+* "Como tratar múltiplos formatos de data no PySpark?"
+* "Melhores práticas para arquitetura de dados em camadas (raw, trusted, refined)"
+* "Como fazer join eficiente entre DataFrames no Spark?"
+* "Como integrar uma API externa em um pipeline Spark sem perder performance?"
+* "Como estruturar um README técnico para um projeto de engenharia de dados?"
+
+---
+
+#### 🔹 Impacto no desenvolvimento
+
+O uso de IA contribuiu para:
+
+* Aceleração no desenvolvimento do pipeline
+* Melhoria na qualidade e organização do código
+* Apoio na tomada de decisões técnicas
+* Maior clareza na documentação e comunicação do projeto
+
+A IA foi utilizada como ferramenta de apoio, mantendo sempre a validação e adaptação das soluções ao contexto do problema proposto.
+
+---
+
 ## 🚀 Futuras Melhorias
 
 Para evolução do projeto em um cenário mais próximo de produção, algumas melhorias podem ser implementadas:
@@ -245,7 +285,6 @@ Para evolução do projeto em um cenário mais próximo de produção, algumas m
   * Documentação técnica e funcional das tabelas
 
 Essas melhorias transformariam o projeto em uma solução mais robusta, escalável e aderente a ambientes reais de engenharia de dados.
-
 
 ---
 
