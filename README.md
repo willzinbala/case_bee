@@ -1,4 +1,4 @@
-# 📊 Data Engineering Case
+# 📊 Case Beecrowd
 
 ## 📌 Escopo Geral
 
