@@ -156,7 +156,7 @@ Essas alternativas aumentariam robustez e organização, porém com maior comple
 
 1. Baixar ou clonar o notebook (`.ipynb`)
 2. Subir o arquivo no Google Colab
-3. Criar a estrutura de pastas (`raw`, `trusted`, `refined`)
+3. Criar a estrutura de pastas rodando o primeiro e segundo notebook (`raw`, `trusted`, `refined`)
 4. Fazer upload das 3 fontes de dados na camada **raw**:
 
    * `customers.csv`
