@@ -89,7 +89,7 @@ Exemplos:
 * `ref_events_customers` → visão analítica de eventos + clientes
 * `ref_orders_brl` → visão unificada de faturamento em BRL
 
-### 🌐 Uso de API Externa
+### 🌐 Uso de API Externa - `exchangerate-api`
 
 Para enriquecer os dados e aumentar seu valor analítico, foi integrada uma API pública de câmbio, permitindo a conversão de valores monetários para uma moeda padrão (BRL).
 
