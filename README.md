@@ -1,5 +1,33 @@
-# case_bee
-Case de modelagem de dados 
+# 📊 Data Engineering Case
+
+## 📌 Escopo Geral
+
+Este projeto tem como objetivo a construção de um pipeline de dados completo, contemplando:
+
+* **Modelagem de dados** baseada em entidades de negócio (customers, orders e events)
+* **Tratamento e padronização de dados** provenientes de múltiplas fontes (CSV, JSON e JSONL)
+* **Aplicação de arquitetura em camadas (Raw, Trusted e Refined)**
+* **Enriquecimento de dados com API externa**, permitindo a padronização de valores monetários
+
+O foco principal foi garantir qualidade, rastreabilidade e capacidade analítica dos dados, simulando um cenário real de engenharia de dados.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Python**
+* **PySpark**
+* **Apache Spark (via Google Colab)**
+* **Parquet (armazenamento otimizado)**
+* **API REST (Exchange Rate API)**
+* **Requests (consumo de API)**
+
+---
+
+## 🏗️ Solução Encontrada
+
+A solução foi construída utilizando o conceito de **arquitetura em camadas**, estruturada da seguinte forma:
+
 
 ## 🧩 Modelagem de Dados e Arquitetura em Camadas
 
@@ -99,3 +127,75 @@ A integração foi realizada de forma eficiente, evitando chamadas linha a linha
 
 Além disso, foi necessário ajustar a direção da taxa de câmbio (invertendo os valores retornados pela API), garantindo a correta conversão para a moeda desejada. O resultado final inclui um novo campo com o valor convertido (`amount_brl`), pronto para agregações e análises.
 
+
+---
+
+## 🔄 Outras Possíveis Soluções
+
+A abordagem adotada com **notebook (.ipynb)** foi intencionalmente mais enxuta, focada em rapidez de desenvolvimento e clareza na demonstração do pipeline.
+
+Outras abordagens possíveis incluem:
+
+* **Modelagem em banco SQL**
+
+  * Criação de tabelas normalizadas
+  * Uso de Python para ingestão e transformação
+  * Execução de queries analíticas diretamente no banco
+
+* **Projeto completo em repositório Git**
+
+  * Estrutura modularizada (scripts, configs, pipelines)
+  * Uso de ferramentas como Airflow ou dbt
+  * Versionamento e organização por camadas
+
+Essas alternativas aumentariam robustez e organização, porém com maior complexidade de implementação.
+
+---
+
+## ▶️ Como Executar o Projeto
+
+1. Baixar ou clonar o notebook (`.ipynb`)
+2. Subir o arquivo no Google Colab
+3. Criar a estrutura de pastas (`raw`, `trusted`, `refined`)
+4. Fazer upload das 3 fontes de dados na camada **raw**:
+
+   * `customers.csv`
+   * `events.jsonl`
+   * `orders.json`
+5. Executar as células do notebook **em sequência**
+
+Ao final, os dados tratados e enriquecidos estarão disponíveis nas camadas **trusted** e **refined**.
+
+---
+
+## 🚀 Futuras Melhorias
+
+* Implementação de **data quality checks automatizados**
+* Tratamento de **dados em tempo real (streaming)**
+* Uso de **taxas de câmbio históricas** baseadas na data do pedido
+* Criação de **camada semântica (data mart)**
+* Integração com ferramentas de orquestração (ex: Airflow)
+* Criação de dashboards (Power BI / Streamlit)
+* Implementação de testes e validações automatizadas
+
+---
+
+## 📈 Considerações e Conclusões
+
+O projeto demonstra na prática a construção de um pipeline de dados completo, desde a ingestão até a disponibilização para análise.
+
+A utilização de arquitetura em camadas permite:
+
+* Separação clara de responsabilidades
+* Maior controle sobre qualidade dos dados
+* Facilidade de manutenção e evolução
+
+O enriquecimento com API externa adiciona valor analítico, mostrando a importância de integrar dados internos com fontes externas para geração de insights mais completos.
+
+---
+
+## 👨‍💻 Autor
+
+**Willian José Nogueira**
+Engenheiro de Dados
+Desafio Técnico
