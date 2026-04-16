@@ -127,7 +127,19 @@ A integração foi realizada de forma eficiente, evitando chamadas linha a linha
 
 Além disso, foi necessário ajustar a direção da taxa de câmbio (invertendo os valores retornados pela API), garantindo a correta conversão para a moeda desejada. O resultado final inclui um novo campo com o valor convertido (`amount_brl`), pronto para agregações e análises.
 
+### ⚠️ Data Quality Issues 
 
+- Missing values:
+  - `name` em customers → registros removidos
+- Invalid timestamps:
+  - Uso de `try_cast` para evitar quebra do pipeline
+- Múltiplos formatos de data:
+  - Uso de `coalesce + try_to_timestamp`
+- Duplicidades:
+  - Remoção por chave primária (event_id, order_id)
+- Valores negativos em orders:
+  - Mantidos e sinalizados como `refund`
+  
 ---
 
 ## 🔄 Outras Possíveis Soluções
